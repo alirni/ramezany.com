@@ -1,23 +1,37 @@
 {
-  "name": "polymer-starter-kit",
+  "name": "Ramezany.com",
   "authors": [
-    "The Polymer Authors"
+    "Ali Ramezany"
   ],
-  "license": "https://polymer.github.io/LICENSE.txt",
+  "license": "All rights reserved",
   "dependencies": {
-    "app-layout": "PolymerElements/app-layout#^0.10.0",
-    "app-route": "PolymerElements/app-route#^0.9.0",
-    "iron-flex-layout": "PolymerElements/iron-flex-layout#^1.0.0",
-    "iron-iconset-svg": "PolymerElements/iron-iconset-svg#^1.0.0",
-    "iron-localstorage": "PolymerElements/iron-localstorage#^1.0.0",
-    "iron-media-query": "PolymerElements/iron-media-query#^1.0.0",
-    "iron-pages": "PolymerElements/iron-pages#^1.0.0",
-    "iron-selector": "PolymerElements/iron-selector#^1.0.0",
-    "paper-icon-button": "PolymerElements/paper-icon-button#~1.1.0",
-    "polymer": "Polymer/polymer#^1.6.0"
+    "polymer": "Polymer/polymer",
+    "app-layout": "PolymerElements/app-layout",
+    "app-route": "PolymerElements/app-route",
+    "iron-flex-layout": "PolymerElements/iron-flex-layout",
+    "iron-iconset-svg": "PolymerElements/iron-iconset-svg",
+    "iron-pages": "PolymerElements/iron-pages",
+    "iron-selector": "PolymerElements/iron-selector",
+    "paper-icon-button": "PolymerElements/paper-icon-button",
+    "paper-progress": "PolymerElements/paper-progress",
+    "iron-component-page": "PolymerElements/iron-component-page",
+    "paper-styles": "WebRTL/paper-styles",
+    "paper-material": "PolymerElements/paper-material",
+    "paper-card": "PolymerElements/paper-card",
+    "paper-menu": "PolymerElements/paper-menu",
+    "paper-item": "PolymerElements/paper-item",
+    "paper-ripple": "PolymerElements/paper-ripple",
+    "paper-toast": "PolymerElements/paper-toast",
+    "paper-menu-button": "PolymerElements/paper-menu-button",
+    "paper-listbox": "PolymerElements/paper-listbox"
   },
   "devDependencies": {
-    "web-component-tester": "^4.0.0"
+    "web-component-tester": "^5.0.1",
+    "iron-component-page": "PolymerElements/iron-component-page#^1.1.9",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.2.6"
   },
-  "private": true
+  "private": true,
+  "resolutions": {
+    "paper-styles": "^2.0.0"
+  }
 }
