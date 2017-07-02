@@ -55,13 +55,22 @@
 
       paper-tabs {
         --paper-tabs: {
-          background-color: var(--app-primary-color);
+          background-color: var(--app-secondary-background-color);
          };
-         --paper-tabs-selection-bar-color: var(--app-secondary-color);
+         --paper-tabs-selection-bar-color: var(--app-primary-color);
       }
 
       paper-tab {
         text-align: center;
+        --paper-tab-ink: var(--app-primary-color);
+      }
+
+      paper-tab a {
+        display: block;
+        text-decoration: none;
+        color: var(--app-primary-text-color);
+        @apply --paper-font-menu;
+        line-height: 3.8em;
       }
     </style>
 
@@ -79,21 +88,18 @@
 
         <paper-tabs selected="0">
           <paper-tab>
-            <a name="view1" href="/view1" tabindex="0">
-              <!--<paper-icon-button icon="person" drawer-toggle></paper-icon-button>-->
-              a
+            <a name="view1" href="/view1">
+              منو اول
             </a>
           </paper-tab>
           <paper-tab>
-            <a name="view2" href="/view2" tabindex="1">
-              <!--<paper-icon-button icon="person" drawer-toggle></paper-icon-button>-->
-              b
+            <a name="view2" href="/view2">
+              منو دوم
             </a>
           </paper-tab>
           <paper-tab>
-            <a name="view3" href="/view3" tabindex="2">
-              <!--<paper-icon-button icon="person" drawer-toggle></paper-icon-button>-->
-              c
+            <a name="view3" href="/view3">
+              منو سوم
             </a></a>
           </paper-tab>
         </paper-tabs>
