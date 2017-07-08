@@ -34,6 +34,7 @@
         color: var(--app-primary-text-color);
 
         @apply --layout-fit;
+        position: fixed;
         @apply --paper-font-common-base;
         @apply --layout-vertical;
         @apply --layout-center-center;
@@ -44,8 +45,13 @@
       }
 
       .pic {
-        background-color: var(--app-light-text-color);
+        background-color: var(--app-primary-color);
+        background-image: url("/images/alirni.png");
+        background-position: center center;
+        background-repeat: no-repeat;
+        /*background-size: cover;*/
         width: 20em;
+        /*height: 20em;*/
         margin-left: .2em;
       }
 
@@ -72,6 +78,10 @@
         @apply --paper-font-menu;
         line-height: 3.8em;
       }
+
+      a:focus {
+        outline: none;
+      }
     </style>
 
     <app-location route="{{route}}"></app-location>
@@ -89,17 +99,22 @@
         <paper-tabs selected="0">
           <paper-tab>
             <a name="view1" href="/view1">
-              منو اول
+              درباره من
             </a>
           </paper-tab>
           <paper-tab>
             <a name="view2" href="/view2">
-              منو دوم
+              پروژه ها
+            </a>
+          </paper-tab>
+          <paper-tab>
+            <a name="view4" href="/view4">
+              بلاگ
             </a>
           </paper-tab>
           <paper-tab>
             <a name="view3" href="/view3">
-              منو سوم
+              تماس با من
             </a></a>
           </paper-tab>
         </paper-tabs>
