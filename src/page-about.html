@@ -1,22 +1,48 @@
 <link rel="import" href="../bower_components/polymer/polymer.html" />
-<link rel="import" href="shared-styles.html" />
+<link rel="import" href="../bower_components/paper-material/paper-material.html" />
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html" />
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html" />
 
 <dom-module id="page-about">
   <template>
-    <style include="shared-styles">
+    <style>
       :host {
-        display: block;
+        @apply --layout-vertical;
+      }
 
-        /*padding: 10px;*/
+      .container {
+        background-color: var(--app-primary-background-color);
+        height: 30em;
+        padding: 2em;
+        overflow-y: scroll;
+      }
+
+      .skill {
+        @apply --layout-vertical;
+        /*@apply --layout-end;*/
+      }
+
+      .skill iron-icon {
+        margin: 2em;
+        --iron-icon-width: 2em;
+        --iron-icon-height: 2em;
+        @apply --layout-flex;
+        --iron-icon-fill-color: var(--app-primary-color);
       }
     </style>
 
-    <div class="card">
-      <div class="circle">1</div>
-      <h1>View One</h1>
-      <p>Ut labores minimum atomorum pro. Laudem tibique ut has.</p>
-      <p>Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Lorem ipsum dolor sit amet, per in nusquam nominavi periculis, sit elit oportere ea.Cu mei vide viris gloriatur, at populo eripuit sit.</p>
-    </div>
+    <paper-material class="container" elevation="0">
+      <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+      <div class="skill">
+        <iron-icon icon="my-icons:illustrator"></iron-icon>
+        <iron-icon icon="my-icons:css"></iron-icon>
+        <iron-icon icon="my-icons:polymer"></iron-icon>
+        <iron-icon icon="my-icons:html"></iron-icon>
+        <iron-icon icon="my-icons:photoshop"></iron-icon>
+      </div>
+      <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+    </paper-material>
+
   </template>
 
   <script>
