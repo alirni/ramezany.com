@@ -122,12 +122,13 @@
         <iron-pages
             selected="[[page]]"
             attr-for-selected="name"
-            fallback-selection="view404"
+            fallback-selection="404"
             role="main">
           <page-about name="about"></page-about>
           <page-portfolio name="portfolio"></page-portfolio>
           <page-contact name="contact"></page-contact>
-          <my-view404 name="view404"></my-view404>
+          <page-blog name="blog"></page-blog>
+          <page-404 name="404"></page-404>
         </iron-pages>
 
       </div>
@@ -167,7 +168,7 @@
       },
 
       _showPage404: function() {
-        this.page = 'view404';
+        this.page = '404';
       },
     });
   </script>
