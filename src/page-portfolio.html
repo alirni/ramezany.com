@@ -1,22 +1,29 @@
 <link rel="import" href="../bower_components/polymer/polymer.html" />
-<link rel="import" href="shared-styles.html" />
+<link rel="import" href="../bower_components/paper-material/paper-material.html" />
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html" />
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html" />
 
 <dom-module id="page-portfolio">
   <template>
-    <style include="shared-styles">
+    <style>
       :host {
-        display: block;
+        @apply --layout-vertical;
+      }
 
-        /*padding: 10px;*/
+      .container {
+        background-color: var(--app-primary-background-color);
+        height: 30em;
+        padding: 2em;
+        overflow-y: scroll;
       }
     </style>
 
-    <div class="card">
+    <paper-material class="container">
       <div class="circle">3</div>
       <h1>View Three</h1>
       <p>Modus commodo minimum eum te, vero utinam assueverit per eu.</p>
       <p>Ea duis bonorum nec, falli paulo aliquid ei eum.Has at minim mucius aliquam, est id tempor laoreet.Pro saepe pertinax ei, ad pri animal labores suscipiantur.</p>
-    </div>
+    </paper-material>
   </template>
 
   <script>
