@@ -1,0 +1,35 @@
+<link rel="import" href="../bower_components/polymer/polymer.html" />
+<link rel="import" href="../bower_components/paper-material/paper-material.html" />
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html" />
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html" />
+
+<dom-module id="page-404">
+  <template>
+    <style>
+      :host {
+        @apply --layout-vertical;
+      }
+
+      .container {
+        background-color: var(--app-primary-background-color);
+        height: 30em;
+        padding: 2em;
+        overflow-y: scroll;
+      }
+    </style>
+
+    <paper-material class="container">
+      <div class="circle">2</div>
+      <a href="/">Head back to home.</a>
+      <h1>View Two</h1>
+      <p>Ea duis bonorum nec, falli paulo aliquid ei eum.</p>
+      <p>Id nam odio natum malorum, tibique copiosae expetenda mel ea.Detracto suavitate repudiandae no eum. Id adhuc minim soluta nam.Id nam odio natum malorum, tibique copiosae expetenda mel ea.</p>
+    </paper-material>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'page-404',
+    });
+  </script>
+</dom-module>

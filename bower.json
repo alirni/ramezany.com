@@ -16,7 +16,7 @@
     "paper-progress": "PolymerElements/paper-progress#^1.0.12",
     "iron-component-page": "PolymerElements/iron-component-page#^1.1.9",
     "paper-styles": "WebRTL/paper-styles#^2.0.0",
-    "paper-material": "PolymerElements/paper-material#^1.0.7",
+    "paper-material": "PolymerElements/paper-material#^2.0.0",
     "paper-card": "PolymerElements/paper-card#^1.1.6",
     "paper-menu": "PolymerElements/paper-menu#^1.3.0",
     "paper-item": "PolymerElements/paper-item#^1.2.2",
