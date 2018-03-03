@@ -1,0 +1,84 @@
+<link rel="import" href="../bower_components/polymer/polymer.html" />
+<link rel="import" href="../bower_components/app-route/app-location.html" />
+<link rel="import" href="../bower_components/app-route/app-route.html" />
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html" />
+
+<link rel="import" href="rni-icon.html" />
+<link rel="import" href="rni-style.html" />
+
+<dom-module id="rni-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <app-location
+      route="{{route}}"
+      url-space-regex="^[[rootPath]]">
+    </app-location>
+
+    <app-route
+      route="{{route}}"
+      pattern="[[rootPath]]:page"
+      data="{{routeData}}"
+      tail="{{subroute}}">
+    </app-route>
+  </template>
+
+  <script>
+    (function () {
+      'use strict';
+      Polymer({
+        is: 'rni-app',
+
+        properties: {
+
+          page: {
+            type: String,
+            reflectToAttribute: true,
+            observer: '_pageChanged',
+          },
+
+          routeData: {
+            type: Object,
+          },
+
+
+          subroute: {
+            type: String,
+          },
+
+          rootPath: {
+            type: String,
+          },
+        },
+
+        observers: [
+          '_routePageChanged(routeData.page)',
+        ],
+
+        _routePageChanged(page) {
+          // Default to 'view1' in that case.
+          this.page = page || 'view1'; // TODO: set default page
+
+          // Close a non-persistent drawer when the page & route are changed.
+          // if (!this.$.drawer.persistent) {
+          //   this.$.drawer.close();
+          // }
+        },
+
+        _pageChanged(page) {
+          // Load page import on demand. Show 404 page if fails
+          var resolvedPageUrl = this.resolveUrl('my-' + page + '.html');
+          Polymer.importHref(resolvedPageUrl, null, this._showPage404.bind(this), true);
+        },
+
+        _showPage404() {
+          this.page = 'view404';
+        }
+      });
+    })();
+  </script>
+</dom-module>
